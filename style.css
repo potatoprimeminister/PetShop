@@ -5,3 +5,62 @@
     box-sizing: border-box;
     font-family:"Inter", sans-serif;
 }
+nav{
+    background-color: #FFF6E9;
+    color:burlywood;
+    padding:24px 52px;
+}
+.navTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search{
+    display: flex;
+    align-items: center;
+    background-color: #FF914D;
+    padding: 12px 20px;
+    border-radius: 20px;
+}
+.searchInput{
+    border:none;
+    background-color: transparent;
+}
+.searchInput::placeholder{
+    color: lightgrey;
+}
+.limitedOffer{
+    font-size: 20px;
+    border-bottom:1px solid #4CAF50;
+    cursor: pointer;
+}
+.navBottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuItem{
+    padding: 20px;
+    cursor: pointer;
+    color: burlywood;
+    font-weight: 400;
+}
+.placeholderLogo img{
+    max-width: 200px;
+    max-height: auto;
+}
+.slider{
+    background: #2A7B9B;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(61, 204, 197, 1) 50%, rgba(83, 237, 222, 1) 100%);
+
+}
+.sliderWrapper{
+    display: flex;
+    width: 500vw;
+}
+.sliderItem{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
