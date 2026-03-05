@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family:"Inter", sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #FFF6E9;
 }
@@ -217,35 +220,40 @@ nav{
     font-size: 24px;
     color: #3A3A3A;
 }
-.ages,.genders{
+.sizes,.types{
     display: flex;
 }
 
-.gender{
-    width: 52px;
-    height: 32px;
+.type{
+    min-width: 60px;
+    min-height: 32px;
     border-radius:5px;
     background-color: burlywood;
     margin-right: 10px;
     text-align: center;
     cursor: pointer;
-    padding-top:5px;
+    padding:8px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
-.age{
-    width: 52px;
-    height: 32px;
+.size{
+    min-width: 60px;
+    min-height: 32px;
     border-radius:5px;
     background-color: burlywood;
     margin-right: 10px;
     text-align: center;
     cursor: pointer;
-    padding-top:5px;
+    padding:8px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
-
+.size.active{
+    background-color: rgb(210, 127, 19);
+}
+.type.active{
+    background-color: rgb(210, 127, 19);
+}
 .productBtn{
     font-size: 30px;
     font-weight: 900;
