@@ -29,6 +29,9 @@ nav{
 .searchInput::placeholder{
     color: lightgrey;
 }
+.searchInput:focus{
+    outline: none;
+}
 .limitedOffer{
     font-size: 20px;
     border-bottom:1px solid #4CAF50;
@@ -50,17 +53,168 @@ nav{
     max-height: auto;
 }
 .slider{
-    background: #2A7B9B;
-    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(61, 204, 197, 1) 50%, rgba(83, 237, 222, 1) 100%);
-
+    background: linear-gradient(135deg, #FFF6E9, #FFD6B8);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    overflow: hidden;
 }
 .sliderWrapper{
     display: flex;
     width: 500vw;
+    transition: all 1s ease-in-out;
 }
 .sliderItem{
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    height: 80vh;
+}
+
+.sliderBG{
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.sliderImg{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    max-width: 450px;
+    max-height: 500px;
+    object-fit: contain;
+}
+.sliderTitle{
+    position: absolute;
+    top:10%;
+    right: 10%;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    color: burlywood;
+    z-index: 1;
+}
+.sliderPrice{
+    position: absolute;
+    top:10%;
+    left: 10%;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    color: burlywood;
+    border-bottom: 1px solid gray;
+    z-index: 1;
+}
+.buyBtn{
+    position: absolute;
+    top:50%;
+    right: 10%;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    color: burlywood;
+    border: 1px solid gray;
+    z-index: 1;
+    background-color: #4CAF50;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+.buyBtn:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    transform: translateY(-3px);
+    box-shadow: 0px 3px 6px rgba(76, 175, 80, 0.35);
+}
+.buyBtn:active{
+    cursor: pointer;
+    scale:0.95;
+    transition: all 0.1s;
+}
+.sliderItem:nth-child(1) .sliderBG{
+    background-color: #FFE4C4; 
+}
+
+.sliderItem:nth-child(2) .sliderBG{
+    background-color: #FFD6E7; 
+}
+
+.sliderItem:nth-child(3) .sliderBG{
+    background-color: #CDEBFF; 
+}
+
+.sliderItem:nth-child(4) .sliderBG{
+    background-color: #FFF3B0;
+}
+
+.sliderItem:nth-child(5) .sliderBG{
+    background-color: #D9F2D9;
+}
+
+@media (max-width: 900px){
+
+    .sliderTitle{
+        font-size: 40px;
+        right: 5%;
+        top: 15%;
+    }
+
+    .sliderPrice{
+        font-size: 40px;
+        left: 5%;
+        top: 15%;
+    }
+
+    .sliderImg{
+        max-width: 350px;
+    }
+
+    .buyBtn{
+        font-size: 22px;
+        right: 5%;
+        top: 60%;
+    }
+
+    .sliderBG{
+        width: 550px;
+        height: 550px;
+    }
+}
+
+@media (max-width: 600px){
+
+    .sliderTitle{
+        font-size: 28px;
+        top: 10%;
+        right: 5%;
+    }
+
+    .sliderPrice{
+        font-size: 28px;
+        top: 20%;
+        left: 5%;
+    }
+
+    .sliderImg{
+        max-width: 260px;
+    }
+
+    .sliderBG{
+        width: 400px;
+        height: 400px;
+    }
+
+    .buyBtn{
+        font-size: 18px;
+        padding: 8px 16px;
+        top: 65%;
+    }
 }
