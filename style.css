@@ -435,6 +435,7 @@ footer{
     padding: 5px;
 }
 .fBtn{
+    margin:5px;
     padding: 5px;
     border: none;
     background-color: black;
@@ -523,3 +524,4 @@ footer{
         top: 65%;
     }
 }
+
