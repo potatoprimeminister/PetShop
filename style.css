@@ -10,6 +10,7 @@ html{
 }
 body{
     background-color: #FFF6E9;
+    overflow-x: hidden;
 }
 nav{
     color: #3A3A3A;
@@ -554,3 +555,4 @@ footer{
     }
 
 }
+
