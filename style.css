@@ -168,12 +168,14 @@ nav{
 
 .features{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 50px;
     background-color: #FFF6E9;
 }
 .feature{
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -414,6 +416,7 @@ footer{
     font-size: 16px;
 }
 .fList{
+    margin: 0px;
     padding: 0;
     list-style: none;
     cursor: pointer;
@@ -435,7 +438,7 @@ footer{
     padding: 5px;
 }
 .fBtn{
-    margin:5px;
+    margin: 5px;
     padding: 5px;
     border: none;
     background-color: black;
@@ -528,6 +531,26 @@ footer{
         padding: 8px 16px;
         top: 65%;
     }
+   .product{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .productDetails{
+        width: 100%;
+        padding: 20px;
+        margin-top: 0;
+    }
+
+    .productImg{
+        width: 80%;
+    }
+
+    .productBtn{
+        font-size: 20px;
+        width: 100%;
+    }
+
 }
-
-
