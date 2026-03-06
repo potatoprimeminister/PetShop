@@ -14,6 +14,7 @@ body{
 nav{
     color: #3A3A3A;
     padding:24px 52px;
+    user-select: none;
 }
 .navTop{
     display: flex;
@@ -131,6 +132,7 @@ nav{
     padding: 10px 25px;
     border-radius: 10px;
     cursor: pointer;
+    user-select: none;
     transition: background-color 0.2s ease-in;
 }
 .buyBtn:hover{
@@ -193,10 +195,14 @@ nav{
 }
 
 .product{
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #FFF6E9, #FFD6B8);
-    clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
     position: relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
 }
 
 .productImg{
@@ -206,26 +212,32 @@ nav{
     margin-top: 12px;
 }
 .productDetails{
-    position:absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top:10%;
     top:10%;
     right: 0;
     width: 40%;
     padding: 50px;
 }
 .productTitle{
-    font-size: 75px;
+    font-size: clamp(36px, 6vw, 75px);
     font-weight: 900;
 }
 .productDesc{
+    display: flex;
     font-size: 24px;
     color: #3A3A3A;
 }
 .sizes,.types{
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    user-select: none;
 }
 
 .type{
-    min-width: 60px;
+    min-width: 68px;
     min-height: 32px;
     border-radius:5px;
     background-color: burlywood;
@@ -278,7 +290,180 @@ nav{
     scale:0.95;
     transition: all 0.1s;
 }
-
+.payment{
+    max-width: 500px;
+    max-height: 600px;
+    background-color: burlywood;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+    padding:10px 50px;
+    display: flex;
+    flex-direction:column;
+    box-shadow: 13px 8px 15px 2px rgba(0,0,0,0.51);
+    display:none;
+}
+.payTitle{
+    font-size: 20px;
+    color:#3A3A3A;
+    text-align: center;
+    
+}
+label{
+    font-size: 14px;
+    font-weight: 300;
+}
+.payInput{
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.payInput::placeholder{
+    color:#3a3a3a77;
+}
+.cardIcon i{
+    font-size: 24px;
+    margin-left: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+.cardIcon i:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    transform: translateY(-3px);
+}
+.cardIcon i:active{
+    cursor: pointer;
+    scale:0.95;
+    transition: all 0.1s;
+}
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.payInput.sm{
+    width: 30%;
+}
+.payBtn{
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    color: #3A3A3A;
+    border: none;
+    z-index: 1;
+    background-color: #4CAF50;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+    user-select: none;
+}
+.payBtn:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    transform: translateY(-3px);
+    box-shadow: 0px 3px 6px rgba(76, 175, 80, 0.35);
+}
+.payBtn:active{
+    cursor: pointer;
+    scale:0.95;
+    transition: all 0.1s;
+}
+.close{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    right: 10px;
+    top: 10px;
+    user-select: none;
+}
+.close:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    transform: translateY(-3px);
+    box-shadow: 0px 3px 6px rgba(76, 175, 80, 0.35);
+}
+.close:active{
+    cursor: pointer;
+    scale:0.95;
+    transition: all 0.1s;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footerLeft{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+}
+.fMenuTitle{
+    font-size: 16px;
+}
+.fList{
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+}
+.fListItem{
+    color: gray;
+}
+.fListItem span:hover{
+    border-bottom: 1px solid black;
+}
+.footerRight{
+    flex: 1;
+    padding: 50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fInput{
+    padding: 5px;
+}
+.fBtn{
+    padding: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fBtn:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    transform: translateY(-3px);
+}
+.fBtn:active{
+    cursor: pointer;
+    scale:0.95;
+    transition: all 0.1s;
+}
+.fIcons{
+    display: flex;
+}
+.fIcons i{
+    font-size: 20px;
+    margin-right: 10px;
+    
+}
+.copyright{
+    font-weight: 300;
+    font-size: 14px;
+}
 @media (max-width: 900px){
 
     .sliderTitle{
