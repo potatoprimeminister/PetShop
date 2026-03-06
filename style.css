@@ -459,7 +459,12 @@ footer{
 .fIcons i{
     font-size: 20px;
     margin-right: 10px;
-    
+    cursor: pointer;
+}
+.fIcons i:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    transform: translateY(-3px);
 }
 .copyright{
     font-weight: 300;
@@ -524,4 +529,5 @@ footer{
         top: 65%;
     }
 }
+
 
