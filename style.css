@@ -505,7 +505,28 @@ footer{
 }
 
 @media (max-width: 600px){
+    .navTop{
+        flex-direction: column;
+        gap: 10px;
+    }
 
+    .search{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .searchInput{
+        width: 100%;
+    }
+
+    .navBottom{
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .menuItem{
+        flex-shrink: 0;
+    }
     .sliderTitle{
         font-size: 28px;
         top: 10%;
@@ -555,4 +576,3 @@ footer{
     }
 
 }
-
