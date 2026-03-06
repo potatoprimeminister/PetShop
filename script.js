@@ -110,3 +110,14 @@ currentProductSize.forEach((size)=>{
                 size.classList.add("active");
             });
         });
+
+const productBtn=document.querySelector(".productBtn");
+const payment=document.querySelector(".payment");
+const close=document.querySelector(".close");
+
+productBtn.addEventListener("click",()=>{
+    payment.style.display="flex"
+})
+close.addEventListener("click",()=>{
+    payment.style.display="none"
+})
